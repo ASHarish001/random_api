@@ -1,0 +1,16 @@
+# gitignore for django project
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.mo
+*.swp
+*.swo
+*.bak
+*.tmp
+*.DS_Store
+*.egg-info/
+*.egg
