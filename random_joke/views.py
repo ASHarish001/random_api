@@ -55,8 +55,8 @@ def all_jokes(request):
 
 @api_view(['GET'])
 def random_joke_by_type(request):
-    print(request.query_params)
-    print(type(request.query_params))
+    # print(request.query_params)
+    # print(type(request.query_params))
     joke_type = request.query_params.get('type')
     count = request.query_params.get('count')
     jokes_file = os.path.join(os.path.dirname(__file__), 'jokes.json')
@@ -68,8 +68,8 @@ def random_joke_by_type(request):
 
 @api_view(['GET'])
 def random_jokes_by_type(request):
-    print(request.query_params)
-    print(type(request.query_params))
+    # print(request.query_params)
+    # print(type(request.query_params))
     joke_type = request.query_params.get('type')
     count = request.query_params.get('count')
     jokes_file = os.path.join(os.path.dirname(__file__), 'jokes.json')
@@ -88,8 +88,8 @@ def random_jokes_by_type(request):
     return Response(random.sample(all_jokes_by_type, number))
 
 def plain_random_jokes_by_type(request):
-    print(request.GET)
-    print(type(request.GET))
+    # print(request.GET)
+    # print(type(request.GET))
     joke_type = request.GET.get('type')
     count = request.GET.get('count')
     jokes_file = os.path.join(os.path.dirname(__file__), 'jokes.json')
